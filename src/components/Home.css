@@ -1,3 +1,5 @@
 .home {
+  min-height: 70vh;
+  background-color: white;
   opacity: 0.7;
 }
