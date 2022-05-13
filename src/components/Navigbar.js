@@ -1,6 +1,5 @@
 import React from "react";
-import Navbar from "react-bootstrap/Navbar";
-import Container from "react-bootstrap/Container";
+import { Container, Navbar } from "react-bootstrap";
 import "./Navigbar.css";
 
 const Navigbar = () => {
@@ -15,7 +14,7 @@ const Navigbar = () => {
           />
         </Navbar.Brand>
         <Navbar.Collapse className="justify-content-end">
-          <Navbar.Text>Discografia</Navbar.Text>
+          <Navbar.Text className="h2">Discografia</Navbar.Text>
         </Navbar.Collapse>
       </Container>
     </Navbar>
