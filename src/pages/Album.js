@@ -1,16 +1,11 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import useGetAlbumQuery from "../apis/supliuApi";
+import { useSelector } from "react-redux";
 
 const Album = () => {
-  const { data, itsFetching } = useGetAlbumQuery("min");
-  if (itsFetching) {
-    return <p>Loading...</p>;
-  }
-  console.log(data);
   return (
-    <Container className="mt-2 mb-4 p-2">
-      <h1>Done</h1>
+    <Container>
+      <h1>Album</h1>
     </Container>
   );
 };
