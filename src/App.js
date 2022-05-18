@@ -1,8 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./components/Home";
-import Album from "./components/Album";
+import Home from "./pages/Home";
+import Album from "./pages/Album";
 import Layout from "./components/Layout";
 import Navigbar from "./components/Navigbar";
 
