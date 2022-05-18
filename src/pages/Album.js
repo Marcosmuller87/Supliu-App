@@ -1,26 +1,16 @@
 import React from "react";
-import { Container, Table } from "react-bootstrap";
-import { useSelector } from "react-redux";
+import { Container } from "react-bootstrap";
+import useGetAlbumQuery from "../apis/supliuApi";
 
 const Album = () => {
-  const { albums, isLoading, error } = useSelector((state) => state.albums);
-
+  const { data, itsFetching } = useGetAlbumQuery("min");
+  if (itsFetching) {
+    return <p>Loading...</p>;
+  }
+  console.log(data);
   return (
     <Container className="mt-2 mb-4 p-2">
-      {isLoading && <h2>Loading...</h2>}
-      {error && <h2>{error}</h2>}
-      {albums && (
-        <Table striped bordered hover>
-          <tbody>
-            {albums.map((album) => (
-              <tr key={album.id}>
-                <td>Album:{album.id}</td>
-                <td>{album.title}</td>
-              </tr>
-            ))}
-          </tbody>
-        </Table>
-      )}
+      <h1>Done</h1>
     </Container>
   );
 };
