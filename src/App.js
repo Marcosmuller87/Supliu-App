@@ -1,10 +1,13 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import Album from "./pages/Album";
+// Componentes
 import Layout from "./components/Layout";
 import Navigbar from "./components/Navigbar";
+// Pages
+import Home from "./pages/Home";
+import AddAlbum from "./pages/AddAlbum";
+import AddTrack from "./pages/AddTrack";
 
 const App = () => {
   return (
@@ -14,7 +17,8 @@ const App = () => {
         <Router>
           <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route path="/album" element={<Album />} />
+            <Route path="/addAlbum" element={<AddAlbum />} />
+            <Route path="/addTrack" element={<AddTrack />} />
           </Routes>
         </Router>
       </Layout>
